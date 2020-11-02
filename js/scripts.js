@@ -7,17 +7,14 @@ window.onload = (event) => {
 
 
 
-    btn[0].addEventListener("click", function(){
+    btn[0].addEventListener("click",function (e){
         if(email.value == ""){
             message[0].innerHTML = "Please Enter a Valid Email Address"
         }else{
             message[0].innerHTML = "Thank You! Your email address " + email.value + " has been added to our mailing list!"
         }
-
-        alert("The submission button makes an attempt to post the form thus reloading the page in this instance too quickly to see the message update with email. However it was still added to message")
-
-
-    });
+        e.preventDefault()
+    })
 
 
 
